@@ -1,0 +1,30 @@
+<div th:if="${visitorsList.size() > 0}">
+    <p class="lead">The last <span th:text="${visitorsList.size()}"></span> visitors:</p>
+    <div class="row justify-content-center">
+        <table class="table table-striped table-hover w-50 justify-content-center">
+
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th class="action-column"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="visitor : ${visitorsList}">
+                <td th:text="${visitor.name}"></td>
+                <td class="action-column">
+                    <a th:href="@{/deleteVisitor/{id}(id=${visitor.id})}"
+                       th:hx-delete="@{|/deleteVisitor/${visitor.id}|}"
+                       hx-target="#visitors-table"
+                       hx-swap="innerHTML">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div th:unless="${visitorsList.size() > 0}" class="text-center">
+    <p class="lead">No visitors yet!</p>
+</div>

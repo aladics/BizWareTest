@@ -1,0 +1,13 @@
+<div class="container mt-5">
+    <h1 id="greeting" class="display-4 text-center text-primary">Hello <strong>BizWare!</strong></h1>
+    <p class="lead text-center">Welcome! To get your own greeting, please introduce yourself:</p>
+    <div class="input-group mb-3 w-25 mx-auto">
+        <input type="text" id="nameInput" name="name" class="form-control" placeholder="Your name" aria-label="Your name" onfocus="this.placeholder=''" onblur="this.placeholder='Your name'" onkeyup="checkInput()">
+        <button id="greetButton" hx-post="/greet"
+                hx-target="#greeting"
+                hx-swap="innerHTML"
+                hx-include="#nameInput"
+                class="btn btn-primary" type="button" disabled>Greet me!
+        </button>
+    </div>
+</div>
