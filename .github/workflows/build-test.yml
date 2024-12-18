@@ -19,6 +19,12 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
           cache: gradle
+      - uses: pmd/pmd-github-action@v2
+        id: pmd
+        with:
+          version: '6.55.0'
+          sourcePath: 'src/main/java'
+          rulesets: 'ruleset.xml'
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
