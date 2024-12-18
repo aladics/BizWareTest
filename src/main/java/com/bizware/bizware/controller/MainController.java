@@ -46,4 +46,5 @@ public class MainController {
         model.addAttribute("visitorsList", visitorRepository.findAll());
         return "visitors_table_fragment";
     }
+
 }
