@@ -21,4 +21,4 @@ jobs:
           password: ${{ secrets.SSH_PW }}
           script: |
             cd ${{ secrets.APP_DIR }}
-            ./local_run
+            ./local_run.sh
