@@ -1,4 +1,4 @@
-name: Build and test
+name: Test and run PMD
 
 on:
   workflow_dispatch:
