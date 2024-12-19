@@ -22,7 +22,7 @@ jobs:
       - uses: pmd/pmd-github-action@v2
         id: pmd
         with:
-          version: '6.55.0'
+          version: '7.7.0'
           sourcePath: 'src/main/java'
           rulesets: 'ruleset.xml'
 
