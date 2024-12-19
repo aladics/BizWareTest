@@ -20,5 +20,5 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PW }}
           script: |
-            cd <app_dir>
+            cd ${{ secrets.APP_DIR }}
             ./local_run
