@@ -21,4 +21,5 @@ jobs:
           password: ${{ secrets.SSH_PW }}
           script: |
             cd ${{ secrets.APP_DIR }}
+            git pull
             ./local_run.sh
