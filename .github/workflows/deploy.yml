@@ -22,4 +22,5 @@ jobs:
           script: |
             cd ${{ secrets.APP_DIR }}
             git pull
+            chmod +x local_run.sh
             ./local_run.sh
